@@ -44,20 +44,12 @@ async function editProduct(id, data) {
 
 async function getProductsByCategory(category) {
   const response = await axios.get(
-<<<<<<< HEAD
-    `${config.apiUrl}/api/products/category/${category}
-    }`
-=======
     `${config.apiUrl}/api/products/category/${category}`
->>>>>>> f22c41e1f1539b4d62b5f105892d82abb9634cbe
   );
 
   return response.data;
 }
 
-<<<<<<< HEAD
-export { getAllProducts, getProductById, addProduct, editProduct,getProductsByCategory };
-=======
 async function getProductsByBrand(brand) {
   const response = await axios.get(
     `${config.apiUrl}/api/products/brand/${brand}`
@@ -81,7 +73,6 @@ export {
   getProductsByBrand,
   getBrands,
 };
->>>>>>> f22c41e1f1539b4d62b5f105892d82abb9634cbe
 
 /**
  * HTTP Methods
