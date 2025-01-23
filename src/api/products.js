@@ -43,7 +43,16 @@ async function editProduct(id, data) {
   return response.data;
 }
 
-export { getAllProducts, getProductById, addProduct, editProduct };
+async function getProductsByCategory(category) {
+  const response = await axios.get(
+    `${config.apiUrl}/api/products/category/${category}
+    }`
+  );
+
+  return response.data;
+}
+
+export { getAllProducts, getProductById, addProduct, editProduct,getProductsByCategory };
 
 /**
  * HTTP Methods

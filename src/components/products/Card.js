@@ -11,7 +11,7 @@ function ProductCard({ product }) {
       <Link href={`${PRODUCTS_ROUTE}/${product.id}`}>
         <Image
           alt={product.name}
-          src={product.imageUrls.length > 0 ? product.imageUrls[0] : teslaCar}
+          src={product.imageUrls?.length > 0 ? product.imageUrls[0] : teslaCar}
           width={500}
           height={500}
           className="h-40 w-auto mx-auto"
@@ -22,7 +22,7 @@ function ProductCard({ product }) {
           {product.brand}
         </span>
 
-        <Link href={`${PRODUCTS_ROUTE}?category=${product.category}`}>
+        <Link href={`${PRODUCTS_ROUTE}/category/${product.category}`}>
           <span className="ml-2 inline-flex items-center rounded-md bg-red-100 px-2 py-1 text-xs font-medium text-red-600 ring-1 ring-inset ring-red-500/10">
             <MdOutlineCategory className="mr-1" />
             {product.category}
